@@ -1,3 +1,9 @@
+"""
+Module which does some encapsulation of the different models so that they have a:
+1. a uniform return value of `SentimentValue`, which is a `tuple[SentimentLabel, float]`;
+2. a uniform calling api for the different models, using `Model.process`.
+"""
+
 from transformers import AutoTokenizer, TFAutoModelForSequenceClassification
 from transformers import pipeline
 from germansentiment import SentimentModel
